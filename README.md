@@ -33,21 +33,21 @@ Start the development server and access the application.
 
 
 ## Steps to Deploy to cloud
-*Create an Azure Virtual Machine (VM):
+* Create an Azure Virtual Machine (VM):
 
-*Set up a new VM in the Azure Portal and install Docker.
+* Set up a new VM in the Azure Portal and install Docker.
 Register a Domain Name:
 
-*Purchase a domain via Azure or any registrar and configure DNS settings to point to your VM's public IP.
+* Purchase a domain via Azure or any registrar and configure DNS settings to point to your VM's public IP.
 Obtain an SSL Certificate:
 
-*Install Certbot on your VM and use it to secure your domain with an SSL certificate.
+* Install Certbot on your VM and use it to secure your domain with an SSL certificate.
 Set Up Azure Container Registry (ACR) or DockerHub:
 
-*Push Docker image to DockerHub for deployment.
+* Push Docker image to DockerHub for deployment.
 Deploy Application:
 
-*Pull your Docker image from DockerHub, then run it on your Azure VM.
-Access Your Application:
+* Pull your Docker image from DockerHub, then run it on your Azure VM.
+Access Application:
 
-*Visit your domain to access the deployed application.
+* Visit your domain to access the deployed application.
