@@ -7,6 +7,8 @@ The application features user registration and login, a location search tool wit
 * PostgreSQL with PostGIS: Database with spatial extensions to handle geographic data.
 * Leaflet.js: JavaScript library for interactive maps.
 * Bootstrap 4: Frontend framework for responsive design.
+* Docker for containerization and deployment.
+* Azure for cloud deployment and docker virtualization.
 
 ## Database Setup
 The database is configured using PostgreSQL with PostGIS extension enabled. The sample data includes towns and cities from all counties in Ireland, alphabetically ordered for ease of management.
@@ -27,3 +29,25 @@ Start the development server and access the application.
 * Location Search: Users can search for towns and cities across Ireland to find meetup locations. The app uses OpenStreetMap with Leaflet.js for interactive maps.
 * Geospatial Data: Leveraging GeoDjango and PostGIS, the app allows for precise location tracking and querying of geographic data.
 * The app includes locations from every county in Ireland, ensuring all major towns and cities are represented.
+
+
+
+## Steps to Deploy to cloud
+*Create an Azure Virtual Machine (VM):
+
+*Set up a new VM in the Azure Portal and install Docker.
+Register a Domain Name:
+
+*Purchase a domain via Azure or any registrar and configure DNS settings to point to your VM's public IP.
+Obtain an SSL Certificate:
+
+*Install Certbot on your VM and use it to secure your domain with an SSL certificate.
+Set Up Azure Container Registry (ACR) or DockerHub:
+
+*Push Docker image to DockerHub for deployment.
+Deploy Application:
+
+*Pull your Docker image from DockerHub, then run it on your Azure VM.
+Access Your Application:
+
+*Visit your domain to access the deployed application.
