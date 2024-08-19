@@ -21,3 +21,10 @@ Set up the PostgreSQL database with PostGIS extensions.
 Run migrations to set up the database schema.
 Populate the database with sample locations using the provided management command.
 Start the development server and access the application.
+
+
+## Main Features
+* User Authentication: Secure login and registration system using Django's built-in authentication.
+* Location Search: Users can search for towns and cities across Ireland to find meetup locations. The app uses OpenStreetMap with Leaflet.js for interactive maps.
+* Geospatial Data: Leveraging GeoDjango and PostGIS, the app allows for precise location tracking and querying of geographic data.
+* The app includes locations from every county in Ireland, ensuring all major towns and cities are represented.
