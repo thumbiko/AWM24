@@ -10,6 +10,7 @@ The application features user registration and login, a location search tool wit
 * Bootstrap 4: Frontend framework for responsive design.
 * Docker for containerization and deployment.
 * Azure for cloud deployment and docker virtualization.
+* goDaddy for domain name
 
 ## Database Setup
 The database is configured using PostgreSQL with PostGIS extension enabled. The sample data includes towns and cities from all counties in Ireland, alphabetically ordered for ease of management.
