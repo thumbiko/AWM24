@@ -1,0 +1,47 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Locations</title>
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+<div class="container">
+    <h2>Find Locations</h2>
+    <input type="text" id="town" placeholder="Search for a town">
+    <button id="search">Search</button>
+    <div id="map" style="height: 500px;"></div>
+</div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    var map = L.map('map').setView([53.0, -7.0], 7);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+    }).addTo(map);
+
+    function addMarker(lat, lng, name) {
+        L.marker([lat, lng]).addTo(map)
+            .bindPopup(name);
+    }
+
+    document.getElementById('search').addEventListener('click', function() {
+        var town = document.getElementById('town').value;
+        fetch(`/api/locations/?town=${town}`)
+            .then(response => response.json())
+            .then(data => {
+                map.eachLayer((layer) => {
+                    if (layer instanceof L.Marker) {
+                        map.removeLayer(layer);
+                    }
+                });
+                data.forEach(location => {
+                    addMarker(location.lat, location.lng, location.name);
+                });
+            });
+    });
+</script>
+{% bootstrap_js %}
+</body>
+</html>
