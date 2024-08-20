@@ -1,4 +1,5 @@
 # AWM24
+* My Domain name site https://dcc.godaddy.com/control/dnsmanagement?domainName=bikosulu.eu
 App where users can search and find local car meets with time and details, they have an option of saving to favourites list.
 The application features user registration and login, a location search tool with interactive maps, and comprehensive geographic coverage of towns and cities in Ireland using Leaflet.js and PostGIS.
 
